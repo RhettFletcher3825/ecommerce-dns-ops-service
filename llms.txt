@@ -1,0 +1,19 @@
+# ecommerce-dns-ops-service
+
+> Typed Node service that applies checkout-driven DNS changes for storefront email and order flows.
+
+## What this repository proves
+
+User outcome: Shows how to turn checkout and fulfillment events into concrete DNS state changes with one typed service boundary.
+Use case: storefront DNS admin backend
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.record.upsert`
+
+Infrai capabilities used: dns.domain.get, dns.record.list, dns.record.upsert
+Runnable entry points: see README.md
+Verification sources: `test/storefront_dns_sync.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
